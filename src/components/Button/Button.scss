@@ -1,0 +1,41 @@
+@import '../../styles/variables';
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+
+    color: #FFF;
+    font: 500 'Roboto', sans-serif 16px;
+
+    background: #835AFD;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: filter  0.2s;
+
+    img {
+        margin-right: 8px;
+        
+    }
+
+    &.outlined {
+        background: #fff;
+        border: 2px solid $purple;
+        
+        color: $purple;
+
+    }
+
+    &:not(:disabled):hover {
+        filter: brightness(.9);
+    }
+
+    &:disabled {
+        opacity: .6;
+        cursor: not-allowed;
+    }
+
+}

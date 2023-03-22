@@ -1,0 +1,135 @@
+@import "../../styles/variables";
+
+.Question {
+  width: 100%;
+  height: auto;
+  padding: 16px;
+
+  background: #fefefe;
+  border-radius: 8px;
+
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+
+  
+  & + .Question {
+    margin-top: 8px;
+
+  }
+
+  p {
+    width: 100%;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #29292e;
+    font-size: 16px;
+
+    border: none;
+    margin-bottom: 24px;
+
+    resize: none;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.user-info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+
+  max-height: 32px;
+
+  > div {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+
+    > img {
+      height: 100%;
+
+      border-radius: inherit;
+    }
+
+    &.default {
+      background: $purple;
+
+      > img {
+        height: 100%;
+        padding: 8px;
+      }
+    }
+  }
+
+  > span {
+    width: auto;
+
+    color: #737380;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+.question-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    transition: filter 0.2s;
+
+    &.like-button {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 8px;
+
+      vertical-align: end;
+
+      > span {
+        position: relative;
+        top: 3px;
+        
+        font-size: 16px;
+        font-weight: 400;
+        font-family: "Poppins";
+        color: #737380;
+      }
+
+      svg {
+        background: transparent;
+        border: none;
+        outline: none;
+  
+        cursor: pointer;
+      }
+
+      &.liked {
+        span {
+          vertical-align: text-bottom;
+          color: $purple;
+
+        }
+
+        svg path {
+          stroke: $purple;
+        }
+
+      }
+    }
+
+    &:hover {
+      filter: brightness(.7);
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import '../../styles/variables';
+
+.room-tag {
+    display: flex;
+    width: auto;
+    min-width: 175px;
+    
+    margin-right: 8px;
+    border: 2px solid $purple;
+    border-radius: 8px;
+    background: #fefefe;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: all 0.2s;
+
+    > div {
+        background: $purple;
+        width: auto;  
+        height: 100%;
+        padding: 10px 12px;
+
+        outline: none;
+        border: none;
+
+        transition: inherit;
+
+        img {
+            display: block;
+            margin: auto 0;
+            transition: inherit;
+    
+        }
+    }
+
+    > span {
+        width: auto;
+        height: auto;
+        align-self: center;
+
+        padding: 12px 16px;
+
+        text-align: center;
+        vertical-align: middle;
+        color: #29292e;
+        font: 500 14px 'Roboto';
+        font-weight: 500;
+        font-size: 14px;
+        font-family: 'Roboto', sans-serif;
+
+        flex: 1;
+
+    }
+
+    &:hover ,  &:focus {
+        border-color: $purpleHover;
+
+        transition: 0.2s;
+
+        outline: none;
+        > div > img , > div {
+            background: $purpleHover;
+
+            transition: inherit;
+        }
+    }
+
+    
+
+
+    
+
+}
