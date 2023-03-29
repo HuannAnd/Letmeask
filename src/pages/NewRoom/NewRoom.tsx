@@ -17,7 +17,6 @@ import { database } from '@services/firebase'
 export function NewRoom() {
     const { user } = useAuth();
     const navigate = useNavigate();
-    const { goToRoom } = useRoom();
     const [newRoom, setNewRoom] = useState('');
 
 
