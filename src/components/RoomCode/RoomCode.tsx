@@ -1,12 +1,13 @@
 import copySvg from '@assets/copy.svg'
 
 import './RoomCode.scss'
+import { ButtonHTMLAttributes } from 'react';
 
 type RoomCodeProps = {
 	code: string; 
-}
+} & ButtonHTMLAttributes<HTMLButtonElement>
 
-export function RoomCode({ code }: RoomCodeProps) {
+export function RoomCode({ code, ...props }: RoomCodeProps) {
 	
 	async function copyRoomCodeToClipboard() {
 			navigator.clipboard.writeText(code);
@@ -14,7 +15,7 @@ export function RoomCode({ code }: RoomCodeProps) {
 	}
 	
 	return (
-		<button className='room-tag' onClick={copyRoomCodeToClipboard}>
+		<button {...props} className='room-tag' onClick={copyRoomCodeToClipboard}>
 			<div>
 				<img src={copySvg} alt="Copy icon" />
 			</div>

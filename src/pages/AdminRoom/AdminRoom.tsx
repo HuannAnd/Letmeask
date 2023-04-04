@@ -69,9 +69,8 @@ export function AdminRoom() {
       <nav>
         <img src={logo} alt="Letmeask" />
         <div className='nav-options'>
-          <RoomCode code={roomId!} />
+          <RoomCode title='Copy code' code={roomId!} />
           <Button onClick={handleCloseRoom} isOutlined>Encerrar sala</Button>
-
         </div>
       </nav>
 
