@@ -10,24 +10,19 @@
 
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
 
-  
   & + .Question {
     margin-top: 8px;
-
   }
 
   &.highlight {
-    border: 1px solid #835AFD;
-    background: #F4F0FF;
-    
-    color: #29292e;
-    
+    border: 1px solid #835afd;
+    background: #f4f0ff;
 
+    color: #29292e;
   }
 
   &.answered {
-     background: #DBDCDD;
-
+    background: #dbdcdd;
   }
 
   p {
@@ -114,7 +109,7 @@
       > span {
         position: relative;
         top: 3px;
-        
+
         font-size: 16px;
         font-weight: 400;
         font-family: "Poppins";
@@ -125,7 +120,7 @@
         background: transparent;
         border: none;
         outline: none;
-  
+
         cursor: pointer;
       }
 
@@ -133,18 +128,16 @@
         span {
           vertical-align: text-bottom;
           color: $purple;
-
         }
 
         svg path {
           stroke: $purple;
         }
-
       }
     }
 
     &:hover {
-      filter: brightness(.7);
+      filter: brightness(0.7);
     }
   }
 }

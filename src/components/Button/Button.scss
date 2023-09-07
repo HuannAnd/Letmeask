@@ -1,41 +1,38 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
 .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
 
-    color: #FFF;
-    font: 500 'Roboto', sans-serif 16px;
+  color: #fff;
+  font: 500 "Roboto", sans-serif 16px;
 
-    background: #835AFD;
-    border: 0;
-    border-radius: 8px;
-    cursor: pointer;
+  background: #835afd;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
 
-    transition: filter  0.2s;
+  transition: filter 0.2s;
 
-    img {
-        margin-right: 8px;
-        
-    }
+  img {
+    margin-right: 8px;
+  }
 
-    &.outlined {
-        background: #fff;
-        border: 2px solid $purple;
-        
-        color: $purple;
+  &.outlined {
+    background: #fff;
+    border: 2px solid $purple;
 
-    }
+    color: $purple;
+  }
 
-    &:not(:disabled):hover {
-        filter: brightness(.9);
-    }
+  &:not(:disabled):hover {
+    filter: brightness(0.9);
+  }
 
-    &:disabled {
-        opacity: .6;
-        cursor: not-allowed;
-    }
-
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 }
